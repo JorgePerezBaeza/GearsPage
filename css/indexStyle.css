@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/*Variables*/
+:root{
+
+    --red: #e42115;
+    --black:#020303;
+    --gray: #C3D4E3;
+    --white: #fff;
+    --border: .1rem solid rgba(255,255,255,.3);
+}
+
+/*Generales*/
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    /* text-transform: capitalize; */
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;    
+}
+
+html::-webkit-scrollbar{
+    width: .8rem; 
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--white);
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--black);
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: var(--white);
+    background: var(--red);
+    cursor: pointer;
+}
+
+.btn:hover{
+    box-shadow: 0px 12px 15px 10px rgba(0,0,0,0.5);
+}
+
+.heading{
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    padding-bottom: 4rem;
+    font-size: 5rem;
+}
+
+.heading span{
+    color: var(--red);
+    text-transform: uppercase;
+}
+
+/*header*/
+.header{
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 2.0rem;
+    color: var(--white);
+}
+
+.header .navbar a:hover{
+    color: var(--red);
+    border-bottom: .1rem solid var(--red);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: var(--white);
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--red);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: var(--white);
+    width: 50%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--red);
+}
+
+/*seccion inicio*/
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/Logo/Gears_Fondo2.png");
+    /* background: url(../img/Logo/Gears_Fondo3.png) no-repeat; */
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+    color: var(--white);
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.home .content p{
+    font-size: 1.4rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-align: justify;
+}
+
+/*seccion Facciones*/
+.faccion .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.faccion .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+}
+
+.faccion .box-container .box img{
+    height: 10rem;
+}
+
+.faccion .box-container .box h3{
+    color: var(--white);
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+.faccion .box-container .box .info{
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    text-align: center;
+}
+
+.faccion .box-container .box:hover{
+    background: var(--gray);
+}
+
+.faccion .box-container .box:hover > *{
+    color: var(--black);
+}
